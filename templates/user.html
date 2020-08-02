@@ -1,0 +1,44 @@
+<!doctype html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% include 'includes/_assets.html' %} 
+    <style>
+        form { margin: 10px 10px 10px 10px; }
+    </style>
+</head>
+<html>
+    <body>
+       {% include 'includes/_navbar.html' %}
+       <div class="wrapper">
+         <header class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-7 col-md-offset-1">
+                     <h1>Employee Details</h1>
+                     <form action="{{ url_for('update_user') }}" method="POST">
+                     <div class="col-md-7 text-right">
+                <p>Employee Id <input type="number" name="id" value="{{ user['id'] }}" readonly></p><br>
+                <p>Employee Name <input type="text" name="name" value="{{ user['name'] }}" required></p><br>
+                <p>Email address <input type="email" name="email" value="{{ user['email'] }}" required></p><br>
+                <p>Leaves Taken <input type="number" name="leavestaken" value="{{ user['leavestaken'] }}" required></p><br>
+                <p>Leaves Left <input type="number" name="leavesleft" value="{{ user['leavesleft'] }}" required></p><br>
+                <input type="submit" class="btn btn-success" value="Save">
+                <a class="btn btn-primary" href="{{ url_for('get_users') }}">Cancel</a>
+                <input type="submit" formaction="{{ url_for('delete_user') }}" class="btn btn-danger" value="Delete">
+                         </div>
+            </form>
+                  </div>
+                  <div class="col-md-3 col-md-offset-1 text-center mt-100 mb-100">
+                     <div class="phone1">
+                        <img class="img-responsive img-rounded" src="https://mrpassenger.com/wp-content/uploads/2018/06/change-in-environment.jpg">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         
+         {% include 'includes/_footer.html' %}
+      </div>
+       
+    </body>
+</html>
