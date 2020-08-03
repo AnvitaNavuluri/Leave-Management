@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'includes/_assets.html' %}  
+</head>
+<html>
+   <body>
+      <div class="wrapper">
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Manage Leaves</a>
+          </div>
+          
+          <div class="collapse navbar-collapse" id="navigation">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/users/all">Employee Details</a></li>
+              </ul>
+            </div>
+        </div>
+      </nav>
+         <header class="header">
+            <div class="container">
+               <div class="row">
+                 <div class="content">
+                 <br><br><br>
+                  <div class="col-md-7">
+                  <h1>Manage Leaves</h1>
+                      <p>This is a leave managing Python and Flask CRUD(CREATE, READ, UPDATE, DELETE) Web Application.</p>
+                      <p>The entered employee details are stored in a sqlite database.</p>
+                      <p>We can add, edit and delete employee details.</p>
+                      <br><br>
+                      <h1>How to use Manage Leaves:</h1>
+                         <p>
+                         1.Click on Employee Details
+                         </p>
+                         <p>
+                          2.To add employee, click on Add Employee and fill in the details accordingly.
+                         </p>
+                         <p>
+                          3.To update employee, click on Edit and change the necessary details and click on save.
+                         </p>
+                         <p>
+                         4.To delete employee, click on Edit and click on delete.
+                         </p>
+                     </div>
+                     <div class="col-md-5">
+                         <img class="img-responsive img-rounded" src="https://mrpassenger.com/wp-content/uploads/2018/06/change-in-environment.jpg">
+                     </div>
+                  </div>
+                </div>
+             </div>
+          </header>
+          <footer class="footer text-center">
+        <div class="container">
+            <small>© Copyright 2020. Created by AnvitaNavuluri</small>
+        </div>
+    </footer>
+       </div>
+    </body>
+</html>

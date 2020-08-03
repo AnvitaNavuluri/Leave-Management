@@ -1,14 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    {% include 'includes/_assets.html' %} 
+    {% include 'includes/_assets.html' %}  
     <style>
         form { margin: 10px 10px 10px 10px; }
     </style>
 </head>
 <html>
     <body>
-       {% include 'includes/_navbar.html' %}
+       <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Manage Leaves</a>
+          </div>
+          
+          <div class="collapse navbar-collapse" id="navigation">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/users/all">Employee Details</a></li>
+              </ul>
+            </div>
+        </div>
+      </nav>
        <div class="wrapper">
          <header class="header">
             <div class="container">
@@ -24,7 +44,7 @@
                 <p>Leaves Left <input type="number" name="leavesleft" value="{{ user['leavesleft'] }}" required></p><br>
                 <input type="submit" class="btn btn-success" value="Save">
                 <a class="btn btn-primary" href="{{ url_for('get_users') }}">Cancel</a>
-                <input type="submit" formaction="{{ url_for('delete_user') }}" class="btn btn-danger" value="Delete">
+                        <input type="submit" formaction="{{ url_for('delete_user') }}" class="btn btn-danger" value="Delete">
                          </div>
             </form>
                   </div>
@@ -36,8 +56,11 @@
                </div>
             </div>
          </header>
-         
-         {% include 'includes/_footer.html' %}
+         <footer class="footer text-center">
+        <div class="container">
+            <small>© Copyright 2020. Created by AnvitaNavuluri</small>
+        </div>
+    </footer>
       </div>
        
     </body>

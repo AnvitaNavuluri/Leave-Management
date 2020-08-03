@@ -21,6 +21,13 @@ def init_list():
 
 
 # index
+@app.route('/users/index')
+def index():
+    init_list()
+    return render_template('index.html', result = index)
+
+
+
 @app.route('/users/all')
 def get_users():
     init_list()
@@ -142,7 +149,7 @@ def delete_user_json():
 # for easy routing
 @app.route('/')
 def index_site():
-    return redirect(url_for('get_users'))
+    return redirect(url_for('index'))
 
 @app.route('/users')
 def user_index():

@@ -1,15 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
-   {% include 'includes/_assets.html' %}  
+  {% include 'includes/_assets.html' %}  
 </head>
 <html>
    <body>
       <div class="wrapper">
-         {% include 'includes/_navbar.html' %}
+         <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Manage Leaves</a>
+          </div>
+          
+          <div class="collapse navbar-collapse" id="navigation">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/users/all">Employee Details</a></li>
+              </ul>
+            </div>
+        </div>
+      </nav>
          <header class="header">
             <div class="container">
                <div class="row">
-                  <div class="col-md-7 col-md-offset-1">
+                 <div class="content">
+                 <br><br>
+                  <div class="col-md-7">
                      <table class="table table-hover">
                         <thead>
                            <tr>
@@ -44,15 +66,20 @@
                          <a class="btn btn-primary align-center" href="{{ url_for('new_user') }}">Add Employee</a>
                      </div>
                   </div>
-                  <div class="col-md-3 col-md-offset-1 text-center mt-100 mb-100">
-                     <div class="phone1">
+                  <div class="col-md-3 col-md-offset-1  text-center mt-100 mb-100">
+                     <div class="image-fluid">
                         <img class="img-responsive img-rounded" src="https://mrpassenger.com/wp-content/uploads/2018/06/change-in-environment.jpg">
                      </div>
                   </div>
                </div>
             </div>
+            </div>
          </header>
-         {% include 'includes/_footer.html' %}
+         <footer class="footer text-center">
+        <div class="container">
+            <small>© Copyright 2020. Created by AnvitaNavuluri</small>
+        </div>
+    </footer>
       </div>
    </body>
 </html>
